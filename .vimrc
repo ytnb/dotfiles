@@ -285,14 +285,16 @@ let g:unite_enable_smart_case=1
 let g:unite_source_grep_max_candidates = 200
 let g:unite_source_history_yank_enable =1
 let g:unite_source_file_mru_limit = 200
-nnoremap <silent> ,uy :<C-u>Unite history/yank<CR>
-nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
-nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
-nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
-nnoremap <silent> ,uu :<C-u>Unite file_mru buffer<CR>
-nnoremap <silent> ,ug :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
-nnoremap <silent> ,ucg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
-nnoremap <silent> ,urg :<C-u>UniteResume search-buffer<CR>
+nnoremap [Unite] <NOP>
+nmap ,u [Unite]
+nnoremap <silent> [Unite]y :<C-u>Unite history/yank<CR>
+nnoremap <silent> [Unite]b :<C-u>Unite buffer<CR>
+nnoremap <silent> [Unite]f :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent> [Unite]r :<C-u>Unite -buffer-name=register register<CR>
+nnoremap <silent> [Unite]u :<C-u>Unite file_mru buffer<CR>
+nnoremap <silent> [Unite]g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+nnoremap <silent> [Unite]cg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
+nnoremap <silent> [Unite]rg :<C-u>UniteResume search-buffer<CR>    
 if executable('ag')
   let g:unite_source_grep_command = 'ag'
   let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
