@@ -34,8 +34,8 @@ nnoremap gk k
 nnoremap j gj
 nnoremap gj j
  
-nnoremap <Space>. :<C-u>edit $MYVIMRC<CR>
-nnoremap <Space>r. :<C-u>source $MYVIMRC<CR>
+nnoremap <silent> <Space>ev :<C-u>edit $MYVIMRC<CR>
+nnoremap <silent> <Space>rv :<C-u>source $MYVIMRC<CR>
 
 :highlight TabSpace ctermbg=DarkBlue
 :match TabSpace /\t\|\s\+$/
