@@ -27,6 +27,15 @@ nnoremap <silent> <C-L> :noh<C-L><CR>
 nnoremap <silent> to <C-w><S-t>
 set keywordprg=:help
 autocmd FileType help nnoremap <buffer> q <C-w>c
+nnoremap <C-h> :<C-u>h<Space>
+
+nnoremap k gk
+nnoremap gk k
+nnoremap j gj
+nnoremap gj j
+ 
+nnoremap <Space>. :<C-u>edit $MYVIMRC<CR>
+nnoremap <Space>r. :<C-u>source $MYVIMRC<CR>
 
 :highlight TabSpace ctermbg=DarkBlue
 :match TabSpace /\t\|\s\+$/
