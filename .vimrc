@@ -24,6 +24,9 @@ set showcmd
 set noundofile
 
 nnoremap <silent> <C-L> :noh<C-L><CR>
+nnoremap <silent> to <C-w><S-t>
+set keywordprg=:help
+autocmd FileType help nnoremap <buffer> q <C-w>c
 
 :highlight TabSpace ctermbg=DarkBlue
 :match TabSpace /\t\|\s\+$/
@@ -270,6 +273,7 @@ nmap ga <Plug>(EasyAlign)
 let g:unite_enable_start_insert=1
 let g:unite_enable_ignore_case=1
 let g:unite_enable_smart_case=1
+let g:unite_source_grep_max_candidates = 200
 let g:unite_source_history_yank_enable =1
 let g:unite_source_file_mru_limit = 200
 nnoremap <silent> ,uy :<C-u>Unite history/yank<CR>
