@@ -37,6 +37,12 @@ nnoremap gj j
 nnoremap <silent> <Space>ev :<C-u>edit $MYVIMRC<CR>
 nnoremap <silent> <Space>rv :<C-u>source $MYVIMRC<CR>
 
+inoremap <C-u> <C-g>u<C-u>
+inoremap <C-w> <C-g>u<C-w>
+
+cnoremap <expr> / getcmdtype() == '/' ? '\/' : '/'
+cnoremap <expr> ? getcmdtype() == '?' ? '\?' : '?'
+
 :highlight TabSpace ctermbg=DarkBlue
 :match TabSpace /\t\|\s\+$/
 
@@ -71,6 +77,8 @@ NeoBundle 'glidenote/serverspec-snippets'
 NeoBundle 'junegunn/vim-easy-align'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'kana/vim-textobj-user'
+NeoBundle 'osyo-manga/vim-textobj-multiblock'
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
 NeoBundle 'Shougo/vimproc.vim', {
@@ -301,3 +309,11 @@ if executable('ag')
   let g:unite_source_grep_recursive_opt=''
 endif
 "---unite---------------
+
+"---textobj-multiblock--
+omap ab <Plug>(textobj-multiblock-a)                                                               
+omap ib <Plug>(textobj-multiblock-i)
+xmap ab <Plug>(textobj-multiblock-a)
+xmap ib <Plug>(textobj-multiblock-i)
+"---textobj-multiblock--
+
