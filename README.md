@@ -53,6 +53,7 @@ centos向けに**
 # cd vim
 
 # ./configure --with-features=huge --enable-gui=gnome2 -enable-rubyinterp --enable-luainterp --enable-fail-if-missing
+※ pythonとかry)
 
 # make
 # make install
@@ -87,6 +88,23 @@ set background=dark
 colorscheme soloarized
 
 上記以外はコメントアウト
+```
+
+### The Silver Searcherインストール
+
+* https://github.com/ggreer/the_silver_searcher
+
+```
+※ rhel7
+rpm -Uvh http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
+yum install the_silver_searcher
+
+※ centOS
+yum -y automake
+=>依存あり
+yum -y install pcre-devel xz-devel
+./build.sh
+sudo make install
 ```
 
 ### gnome端末solarized化
