@@ -46,6 +46,14 @@ cnoremap <expr> ? getcmdtype() == '?' ? '\?' : '?'
 :highlight TabSpace ctermbg=DarkBlue
 :match TabSpace /\t\|\s\+$/
 
+"全角スペース表示
+scriptencoding utf-8
+augroup highlightIdegraphicSpace
+  autocmd!
+  autocmd Colorscheme * highlight IdeographicSpace term=underline ctermbg=DarkGreen guibg=DarkGreen
+  autocmd VimEnter,WinEnter * match IdeographicSpace /　/
+augroup END
+
 "-----neobundle--------
 " Note: Skip initialization for vim-tiny or vim-small.
 if !1 | finish | endif
@@ -79,6 +87,7 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'osyo-manga/vim-textobj-multiblock'
+NeoBundle 'honza/vim-snippets'
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
 NeoBundle 'Shougo/vimproc.vim', {
