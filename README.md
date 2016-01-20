@@ -103,6 +103,7 @@ yum install the_silver_searcher
 yum -y automake
 =>依存あり
 yum -y install pcre-devel xz-devel
+git clone https://github.com/ggreer/the_silver_searcher.git
 ./build.sh
 sudo make install
 ```
