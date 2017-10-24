@@ -3,12 +3,38 @@ repo = 'Shougo/unite.vim'
 
 [[plugins]]
 repo = 'Shougo/neomru.vim'
+on_source = ['unite.vim']
 
 [[plugins]]
 repo = 'Shougo/neocomplete.vim'
+on_i = 1
+hook_add = '''
+  let g:acp_enableAtStartup = 0
+  let g:neocomplete#enable_at_startup = 1
+  let g:neocomplete#enable_smart_case = 1
+  let g:neocomplete#sources#syntax#min_keyword_length = 3
+  let g:neocomplete#sources#dictionary#dictionaries = {
+    \ 'default' : '',
+    \ 'vimshell' : $HOME.'/.vimshell_hist'
+    \ }
+'''
 
 [[plugins]]
 repo = 'Shougo/neosnippet.vim'
+on_source = ['neocomplete.vim']
+hook_add = '''
+  imap <C-k>  <Plug>(neosnippet_expand_or_jump)
+  smap <C-k>  <Plug>(neosnippet_expand_or_jump)
+  xmap <C-k>  <Plug>(neosnippet_expand_target)
+  smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+  let g:neosnippet#enable_snipmate_compatibility = 1
+  let g:neosnippet#snippets_directory='~/.cache/dein/repos/github.com/honza/vim-snippets/snippets'
+'''
 
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
+on_source = ['neocomplete.vim']
+
+[[plugins]]
+repo = 'honza/vim-snippets'
+on_source = ['neocomplete.vim']

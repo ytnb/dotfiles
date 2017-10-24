@@ -3,6 +3,14 @@ repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
+hook_add = '''
+  nnoremap [vimfugitive] <Nop>
+  nmap <space>g [vimfugitive]
+  nnoremap <silent> [vimfugitive]s :Gstatus<CR>
+  nnoremap <silent> [vimfugitive]a :Gwrite<CR>
+  nnoremap <silent> [vimfugitive]c :Gcommit-v<CR>
+  nnoremap <silent> [vimfugitive]d :Gdiff<CR>
+'''
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
