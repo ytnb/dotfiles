@@ -10,6 +10,9 @@ hook_add = '''
   nnoremap <silent> [vimfugitive]a :Gwrite<CR>
   nnoremap <silent> [vimfugitive]c :Gcommit-v<CR>
   nnoremap <silent> [vimfugitive]d :Gdiff<CR>
+  nnoremap [vimfugitive]g :<C-u>Git<Space>
+  nnoremap [vimfugitive]gb :<C-u>Git branch<Space>
+  nnoremap [vimfugitive]gc :<C-u>Git checkout<Space>
 '''
 
 [[plugins]]
