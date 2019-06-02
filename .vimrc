@@ -22,6 +22,7 @@ set wildmenu
 set showcmd
 
 set noundofile
+set nrformats=
 
 nnoremap <silent> <C-L> :noh<C-L><CR>
 nnoremap <silent> to <C-w><S-t>

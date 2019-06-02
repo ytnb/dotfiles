@@ -1,0 +1,35 @@
+set surround
+set hlsearch
+set incsearch
+set ignorecase
+set nrformats=
+inoremap jj <ESC>
+nnoremap <C-L> :nohls<CR>
+set cmdheight=2
+set laststatus=2
+set wildmenu
+set showcmd
+set display=lastline
+set showmode
+nnoremap <Space>go :<C-u>action OverrideMethods<CR>
+nnoremap <Space>gi :<C-u>action ImplementMethods<CR>
+nnoremap <Space>=r :<C-u>action ReformatCode<CR>
+nnoremap <Space>=o :<C-u>action OptimizeImports<CR>
+nnoremap <Space>re :<C-u>action RenameElement<CR>
+nnoremap / :<C-u>action Find<CR>
+nnoremap <C-o> :<C-u>action Back<CR>
+nnoremap <C-i> :<C-u>action Forward<CR>
+nnoremap <C-S-o> <C-o>
+nnoremap <C-S-i> <C-i>
+nnoremap [m :<C-u>action MethodUp<CR>
+nnoremap ]m :<C-u>action MethodDown<CR>
+nnoremap <C-S-.> :<C-u>action GotoPreviousError<CR>
+nnoremap <C-.> :<C-u>action GotoNextError<CR>
+nnoremap <Space>sw :<C-u>action SurroundWith<CR>
+" Ctrl+q quick documents
+" " Ctrl+p parameter info
+" inoremap <C-p> <Esc>:action ParameterInfo<CR>a
+" " Ctrl+j
+" " Ctrl+S+space
+" " Ctrl+A+t surround with
+"

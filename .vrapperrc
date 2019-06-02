@@ -1,0 +1,26 @@
+:set imdisable
+:set contentassistmode
+camap <S-n> <C-n>
+camap <S-p> <C-p>
+ino jj <ESC>
+noremap w <Plug>(eclipse-motion:org.eclipse.ui.edit.text.goto.wordNext)
+noremap b <Plug>(eclipse-motion:org.eclipse.ui.edit.text.goto.wordPrevious)
+noremap <C--> :Format<CR>
+eclipseaction Format org.eclipse.jdt.ui.edit.text.java.format
+vnoremap = :Format<CR>
+eclipseaction Format org.eclipse.jdt.ui.edit.text.java.format
+:set hlsearch
+noremap <C-L> :noh<CR>
+noremap <space>re :RenameElement<CR>
+eclipseaction RenameElement org.eclipse.jdt.ui.edit.text.java.rename.element
+noremap <space>ne :GotoNextMember<CR>
+noremap <space>pr :GotoPreviousMember<CR>
+eclipseaction GotoNextMember org.eclipse.jdt.ui.edit.text.java.goto.next.member
+eclipseaction GotoPreviousMember org.eclipse.jdt.ui.edit.text.java.goto.previous.member
+noremap <space>sg :CreateGetterSetter<CR>
+noremap <space>sc :GenerateConstructorUsingFields<CR>
+noremap <space>so :OverrideMethods<CR>
+eclipseaction CreateGetterSetter org.eclipse.jdt.ui.edit.text.java.create.getter.setter
+eclipseaction GenerateConstructorUsingFields org.eclipse.jdt.ui.edit.text.java.generate.constructor.using.fields
+eclipseaction OverrideMethods org.eclipse.jdt.ui.edit.text.java.override.methods
+
